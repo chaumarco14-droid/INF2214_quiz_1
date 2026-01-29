@@ -1,0 +1,17 @@
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CafeEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "customer_name", "drink_name", "quantity", "amount", "is_member", "ts_utc"],
+  "properties": {
+    "event_id": { "type": "integer", "minimum": 1 },
+    "customer_name": { "type": "string", "minLength": 1 },
+    "drink_name": { "type": "string", "minLength": 1 },
+    "quantity": { "type": "integer", "minimum": 1 },
+    "amount": { "type": "number", "minimum": 0 },
+    "is_member": { "type": ["boolean"] },
+    "ts_utc": { "type": ["string"] }
+  }
+}
